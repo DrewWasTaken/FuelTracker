@@ -4,7 +4,7 @@ import './App.css';
 import MyChart from './MyChart';
 
 
-class RecordMileage extends Component {
+class RecordFuel extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +16,7 @@ class RecordMileage extends Component {
         <div class="card">
             <div class="card-body">
 
-            <h5>Mileage Tracker</h5>   
+            <h5>Fuel Expenditure</h5>   
             <MyChart/>   
 
             </div>
@@ -24,4 +24,4 @@ class RecordMileage extends Component {
     );
   }
 }
-export default RecordMileage;
+export default RecordFuel;

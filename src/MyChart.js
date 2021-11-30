@@ -1,12 +1,12 @@
 import React from 'react'
 import { Chart } from 'react-charts'
- 
+
 function MyChart() {
 
-/*   const config = {
-    type: 'bar',
-    options: {}
-  }; */
+  //Add back button
+  //Change type to bar graph
+  //Add text boxes for input
+
 
   const data = React.useMemo(
     () => [
@@ -18,7 +18,7 @@ function MyChart() {
     ],
     []
   )
- 
+
   const axes = React.useMemo(
     () => [
       { primary: true, type: 'linear', position: 'bottom' },
@@ -26,15 +26,11 @@ function MyChart() {
     ],
     []
   )
- 
+
   return (
-    <div
-      style={{
-        width: '325px',
-        height: '300px'
-      }}
-    >
-      <Chart data={data} axes={axes} />
+    <div style={{ width: '325px', height: '300px' }}>
+      <Chart data={data} axes={axes} chartType="BarChart" />
+
     </div>
   )
 }

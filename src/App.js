@@ -1,46 +1,42 @@
 import React, { Component } from 'react';
-import { Chart } from 'react-charts/dist/react-charts.development';
 import './App.css';
-import MyChart from './MyChart';
-import Main from './Main';
+import RecordFuel from './RecordFuel';
+import FrontScreen from './FrontScreen';
+
+
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showMe:true
+      showRecordFuel: false,
+      showFrontScreen: true
     }
+
+    this.showRecordFuel = this.showRecordFuel.bind(this);
+  }
+
+  showRecordFuel() {
+    this.setState(
+      {
+        showRecordFuel: true,
+        showFrontScreen: false
+      })
   }
 
   render() {
+    return (
 
-    function clickMe()
-  {
-      alert ('You clicked me!')
-  }
-    
-  return (
-      
-    <div className="container">
-        <div class="jumbotron">
-          <h3 class="display-5">Fuel + Mileage Tracker</h3>
+        <div class="col-13 offset-0 my-5">
+              {
+                this.state.showRecordFuel ? <RecordFuel /> : null
+              }
+
+              {
+                this.state.showFrontScreen ? <FrontScreen showRecordFuel={this.showRecordFuel} /> : null
+              }
         </div>
-        
-              <div class="col-13 offset-0 my-5">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5>Fuel Expenditure</h5>
-                      {/* {
-                        this.state.showMe()
-                      } */}
-                      
-                  <MyChart />
-                  <Main />
-              </div>
-            </div>
-          </div>
-        </div>
-    );    
+    );
   }
 }
 export default App;
