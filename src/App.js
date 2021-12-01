@@ -21,8 +21,10 @@ class App extends Component {
       {
         showRecordFuel: true,
         showFrontScreen: false
-      })
-  }
+      });
+    }
+      
+  
 
   render() {
     return (
@@ -35,6 +37,7 @@ class App extends Component {
               {
                 this.state.showFrontScreen ? <FrontScreen showRecordFuel={this.showRecordFuel} /> : null
               }
+
         </div>
     );
   }

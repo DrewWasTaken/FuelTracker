@@ -59,18 +59,18 @@ class FrontScreen extends Component {
                 </div>
 
                 <div>
-                    <Button theme="RecordButton" onClick={this.operation}>
+                    <Button theme="RecordButton" onClick={this.showRecordMileage}>
                         Record Mileage
                     </Button>
                 </div>
 
                 <div>
-                    <Button theme="ResultsButton" onClick={this.operation}>
+                    <Button theme="ResultsButton" onClick={this.showResults}>
                         View Results
                     </Button>
                 </div>
             </div>
-            </div>
+            </div>            
         );
     }
 }
