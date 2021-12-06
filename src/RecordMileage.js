@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import './App.css';
-import MyChart from './MyChart';
-
 
 class RecordMileage extends Component {
   constructor(props) {

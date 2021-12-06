@@ -1,33 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import './App.css';
-import MyChart from './MyChart';
-
-const theme = {
-    RecordButton: {
-        default: '#31CACF', //Light-Blue
-        hover: '#D5D5D5'    //Light-Grey
-    },
-    ResultsButton: {
-        default: '#F26627', //Orange
-        hover: '#EF3D59'    //Red
-    }
-}
-
-const Button = styled.button`
-    background-color: ${props => theme[props.theme].default};
-    color: black;
-    padding: 5px 15px
-    border-radius: 5px;
-    outline: 0;
-    text-transform: uppercase;
-    margin: 10px 0px;
-    box-shadow: 0px 2px 2px lightgrey;
-    cursor: pointer;
-    transition: ease background-color 250ms;
-    &:hover {
-    background-color: ${props => theme[props.theme].hover};
-    }`
+import Button from './Button'; 
 
 class FrontScreen extends Component {
     constructor(props) {
