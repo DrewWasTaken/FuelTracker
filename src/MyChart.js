@@ -3,11 +3,6 @@ import { Chart } from 'react-charts'
 
 function MyChart() {
 
-  //Add back button
-  //Change type to bar graph
-  //Add text boxes for input
-
-
   const data = React.useMemo(
     () => [
       {

@@ -4,7 +4,6 @@ import RecordFuel from './RecordFuel';
 import FrontScreen from './FrontScreen';
 
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -22,23 +21,22 @@ class App extends Component {
         showRecordFuel: true,
         showFrontScreen: false
       });
-    }
-      
-  
+  }
+
 
   render() {
     return (
 
-        <div class="col-13 offset-0 my-5">
-              {
-                this.state.showRecordFuel ? <RecordFuel /> : null
-              }
+      <div class="col-13 offset-0 my-5">
+        {
+          this.state.showRecordFuel ? <RecordFuel /> : null
+        }
 
-              {
-                this.state.showFrontScreen ? <FrontScreen showRecordFuel={this.showRecordFuel} /> : null
-              }
+        {
+          this.state.showFrontScreen ? <FrontScreen showRecordFuel={this.showRecordFuel} /> : null
+        }
 
-        </div>
+      </div>
     );
   }
 }

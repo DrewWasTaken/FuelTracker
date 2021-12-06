@@ -9,6 +9,10 @@ const theme = {
     ResultsButton: {
         default: '#F26627', //Orange
         hover: '#EF3D59'    //Red
+    },
+    BackButton: {
+        default: '#D5D5D5', //Light-Grey
+        hover: '#9A9A9A'    //Grey
     }
 }
 
@@ -27,5 +31,4 @@ const Button = styled.button`
     background-color: ${props => theme[props.theme].hover};
     }`
 
-    
 export default Button;

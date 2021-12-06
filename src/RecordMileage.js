@@ -8,15 +8,15 @@ class RecordMileage extends Component {
   }
 
   render() {
-    return (        
-        <div class="card">
-            <div class="card-body">
+    return (
+      <div class="card">
+        <div class="card-body">
 
-            <h5>Mileage Tracker</h5>   
-            <MyChart/>   
+          <h5>Mileage Tracker</h5>
+          <MyChart />
 
-            </div>
         </div>
+      </div>
     );
   }
 }

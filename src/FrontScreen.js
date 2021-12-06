@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Button from './Button'; 
+import Button from './Button';
+import background from "./background.png";
 
 class FrontScreen extends Component {
     constructor(props) {
@@ -18,31 +19,29 @@ class FrontScreen extends Component {
     render() {
         return (
             <div className="container">
+                <div style={{ backgroundImage: `url(${background})` }}> </div>
+                <div class="jumbotron">
+                    <h3 class="display-5">Fuel + Mileage Tracker</h3>
+                </div>
 
-            <div class="jumbotron">
-            <h3 class="display-5">Fuel + Mileage Tracker</h3>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
+                <div class="card">
                     <Button theme="RecordButton" onClick={this.showRecordFuel}>
                         Record Fuel
                     </Button>
                 </div>
 
-                <div>
+                <div class="card">
                     <Button theme="RecordButton" onClick={this.showRecordMileage}>
                         Record Mileage
                     </Button>
                 </div>
 
-                <div>
+                <div class="card">
                     <Button theme="ResultsButton" onClick={this.showResults}>
                         View Results
                     </Button>
                 </div>
             </div>
-            </div>            
         );
     }
 }
