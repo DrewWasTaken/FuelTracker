@@ -15,14 +15,14 @@ class App extends Component {
       showResultsScreen: false
     }
 
-    this.showRecordFuel = this.showRecordFuel.bind(this);
-    this.showFrontScreen = this.showFrontScreen.bind(this);
-    this.showRecordMileage = this.showRecordMileage.bind(this);
-    this.showResultsScreen = this.showResultsScreen.bind(this);
+    this.recordFuelToggle = this.recordFuelToggle.bind(this);
+    this.frontScreenToggle = this.frontScreenToggle.bind(this);
+    this.recordMileageToggle = this.recordMileageToggle.bind(this);
+    this.resultsScreenToggle = this.resultsScreenToggle.bind(this);
 
   }
 
-  showRecordFuel() {
+  recordFuelToggle() {
     this.setState(
       {
         showRecordFuel: true,
@@ -31,7 +31,18 @@ class App extends Component {
         showResultsScreen: false
       });
   }
-  showRecordMileage() {
+
+  frontScreenToggle() {
+    this.setState(
+      {
+        showRecordFuel: false,
+        showFrontScreen: true,
+        showRecordMileage: false,
+        showResultsScreen: false
+      });
+  }
+
+  recordMileageToggle() {
     this.setState(
       {
         showRecordFuel: false,
@@ -40,7 +51,7 @@ class App extends Component {
         showResultsScreen: false
       });
   }
-  showResultsScreen() {
+  resultsScreenToggle() {
     this.setState(
       {
         showRecordFuel: false,
@@ -50,25 +61,25 @@ class App extends Component {
       });
   }
 
-
   render() {
     return (
 
       <div class="col-13 offset-0 my-5">
+        
+        {
+          this.state.showFrontScreen ? <FrontScreen recordFuelToggle={this.showRecordFuel} /> : null
+        }
+
         {
           this.state.showRecordFuel ? <RecordFuel /> : null
         }
 
         {
-          this.state.showFrontScreen ? <FrontScreen showRecordFuel={this.showRecordFuel} /> : null
+          this.state.showRecordMileage ? <RecordMileage /> : null
         }
 
         {
-          this.state.showRecordMileage ? <RecordMileage showRecordMileage={this.showRecordMileage} /> : null
-        }
-
-        {
-          this.state.showResultsScreen ? <ResultsScreen showResultsScreen={this.showResultsScreen} /> : null
+          this.state.showResultsScreen ? <ResultsScreen /> : null
         }
 
       </div>

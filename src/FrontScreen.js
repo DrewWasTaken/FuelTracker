@@ -6,13 +6,28 @@ class FrontScreen extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            showRecordFuel: false,
+            showFrontScreen: true,
+            showRecordMileage: false,
+            showResultsScreen: false
         }
 
-        this.showRecordFuel = this.showRecordFuel.bind(this);
+        this.recordFuelToggle = this.recordFuelToggle.bind(this);
+        this.recordMileageToggle = this.recordMileageToggle.bind(this);
+        this.resultsScreenToggle = this.resultsScreenToggle.bind(this);
+
     }
 
-    showRecordFuel() {
-        this.props.showRecordFuel()
+    recordFuelToggle() {
+        this.props.recordFuelToggle()
+    }
+
+    recordMileageToggle() {
+        this.props.recordMileageToggle()
+    }
+
+    resultsScreenToggle() {
+        this.props.resultsScreenToggle()
     }
 
 
@@ -29,21 +44,21 @@ class FrontScreen extends Component {
 
                 {/* RecordFuel Button */}
                 <div class="card">
-                    <Button theme="RecordButton" onClick={this.showRecordFuel}>
+                    <Button theme="RecordButton" onClick={this.recordFuelToggle}>
                         Record Fuel
                     </Button>
                 </div>
 
                 {/* RecordMileage Button */}
                 <div class="card">
-                    <Button theme="RecordButton" onClick={this.showRecordMileage}>
+                    <Button theme="RecordButton" onClick={this.recordMileageToggle}>
                         Record Mileage
                     </Button>
                 </div>
 
                 {/* ShowResults Button */}
                 <div class="card">
-                    <Button theme="ResultsButton" onClick={this.showResults}>
+                    <Button theme="ResultsButton" onClick={this.resultsScreenToggle}>
                         View Results
                     </Button>
                 </div>

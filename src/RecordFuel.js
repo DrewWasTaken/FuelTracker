@@ -9,11 +9,11 @@ class RecordFuel extends Component {
     this.state = {
     }
 
-    this.showFrontScreen = this.showFrontScreen.bind(this);
+    this.frontScreenToggle = this.frontScreenToggle.bind(this);
   }
 
-  showFrontScreen() {
-    this.props.showFrontScreen()
+  frontScreenToggle() {
+    this.props.frontScreenToggle()
   }
 
 
@@ -24,7 +24,7 @@ class RecordFuel extends Component {
         <div class="card-body">
 
           {/* Back Button */}
-          <Button theme="BackButton" onClick={this.showFrontScreen}>
+          <Button theme="BackButton" onClick={this.FrontScreenToggle}>
             Back
           </Button>
 

@@ -7,14 +7,19 @@ class RecordMileage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      showRecordFuel: false,
+      showFrontScreen: false,
+      showRecordMileage: true,
+      showResultsScreen: false
     }
 
-    this.showFrontScreen = this.showFrontScreen.bind(this);
+    this.recordMileageToggle = this.recordMileageToggle.bind(this);
   }
 
-  showFrontScreen() {
-    this.props.showFrontScreen()
+  recordMileageToggle() {
+    this.props.recordMileageToggle()
   }
+  
 
 
   render() {
@@ -24,7 +29,7 @@ class RecordMileage extends Component {
         <div class="card-body">
 
           {/* Back Button */}
-          <Button theme="BackButton" onClick={this.showFrontScreen}>
+          <Button theme="BackButton" onClick={this.recordMileageToggle}>
             Back
           </Button>
 
