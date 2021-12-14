@@ -1,30 +1,24 @@
 import React, { Component } from 'react';
 import Button from './Button';
 
-// import DateTimePicker from 'react-datetime-picker';
-
 class RecordFuel extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
     }
-
-    this.frontScreenToggle = this.frontScreenToggle.bind(this);
-  }
-
-  frontScreenToggle() {
-    this.props.frontScreenToggle()
   }
 
 
-  render() {
+  
+render() {
     return (
 
       <div class="card">
         <div class="card-body">
 
           {/* Back Button */}
-          <Button theme="BackButton" onClick={this.FrontScreenToggle}>
+          <Button theme="BackButton" onClick={this.props.frontScreenToggle}>
             Back
           </Button>
 
@@ -65,11 +59,16 @@ class RecordFuel extends Component {
             <input type="checkbox" name="checkbox" />
           </label>
         </form>
+        <br />
 
         Time and Date Picker
         <br />
-        Upload Picture
 
+        <div>
+          Upload Receipt: <input type="file" name="price" onChange={this.fileSelectedHandler} />
+          {/* <button onClick={this.fileSelectedHandler}>Upload</button> */}
+        </div>
+        <br />
       </div>
     );
   }

@@ -8,12 +8,6 @@ class ResultsScreen extends Component {
         super(props);
         this.state = {
         }
-
-        this.showResultsScreen = this.showResultsScreen.bind(this);
-    }
-
-    showResultsScreen() {
-        this.props.showResultsScreen()
     }
 
 
@@ -24,7 +18,7 @@ class ResultsScreen extends Component {
                 <div class="card-body">
 
                     {/* Back Button */}
-                    <Button theme="BackButton" onClick={this.showFrontScreen}>
+                    <Button theme="BackButton" onClick={this.props.frontScreenToggle}>
                         Back
                     </Button>
 

@@ -1,41 +1,17 @@
 import React, { Component } from 'react';
 import Button from './Button';
-import background from "./background.png";
 
 class FrontScreen extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showRecordFuel: false,
-            showFrontScreen: true,
-            showRecordMileage: false,
-            showResultsScreen: false
         }
-
-        this.recordFuelToggle = this.recordFuelToggle.bind(this);
-        this.recordMileageToggle = this.recordMileageToggle.bind(this);
-        this.resultsScreenToggle = this.resultsScreenToggle.bind(this);
-
+        
     }
-
-    recordFuelToggle() {
-        this.props.recordFuelToggle()
-    }
-
-    recordMileageToggle() {
-        this.props.recordMileageToggle()
-    }
-
-    resultsScreenToggle() {
-        this.props.resultsScreenToggle()
-    }
-
 
     render() {
         return (
             <div className="container">
-                {/* Background Image */}
-                <div style={{ backgroundImage: `url(${background})` }}> </div>
 
                 {/* Title */}
                 <div class="jumbotron">
@@ -44,21 +20,21 @@ class FrontScreen extends Component {
 
                 {/* RecordFuel Button */}
                 <div class="card">
-                    <Button theme="RecordButton" onClick={this.recordFuelToggle}>
+                    <Button theme="RecordButton" onClick={this.props.recordFuelToggle}>
                         Record Fuel
                     </Button>
                 </div>
 
                 {/* RecordMileage Button */}
                 <div class="card">
-                    <Button theme="RecordButton" onClick={this.recordMileageToggle}>
+                    <Button theme="RecordButton" onClick={this.props.recordMileageToggle}>
                         Record Mileage
                     </Button>
                 </div>
 
                 {/* ShowResults Button */}
                 <div class="card">
-                    <Button theme="ResultsButton" onClick={this.resultsScreenToggle}>
+                    <Button theme="ResultsButton" onClick={this.props.resultsScreenToggle}>
                         View Results
                     </Button>
                 </div>

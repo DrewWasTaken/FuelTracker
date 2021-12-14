@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import RecordFuel from './RecordFuel';
 import FrontScreen from './FrontScreen';
+import RecordFuel from './RecordFuel';
 import RecordMileage from './RecordMileage';
 import ResultsScreen from './ResultsScreen';
 
@@ -22,21 +21,21 @@ class App extends Component {
 
   }
 
-  recordFuelToggle() {
+  frontScreenToggle() {
     this.setState(
       {
-        showRecordFuel: true,
-        showFrontScreen: false,
+        showFrontScreen: true,
+        showRecordFuel: false,
         showRecordMileage: false,
         showResultsScreen: false
       });
   }
 
-  frontScreenToggle() {
+  recordFuelToggle() {
     this.setState(
       {
-        showRecordFuel: false,
-        showFrontScreen: true,
+        showFrontScreen: false,
+        showRecordFuel: true,
         showRecordMileage: false,
         showResultsScreen: false
       });
@@ -45,8 +44,8 @@ class App extends Component {
   recordMileageToggle() {
     this.setState(
       {
-        showRecordFuel: false,
         showFrontScreen: false,
+        showRecordFuel: false,
         showRecordMileage: true,
         showResultsScreen: false
       });
@@ -54,8 +53,8 @@ class App extends Component {
   resultsScreenToggle() {
     this.setState(
       {
-        showRecordFuel: false,
         showFrontScreen: false,
+        showRecordFuel: false,
         showRecordMileage: false,
         showResultsScreen: true
       });
@@ -77,15 +76,19 @@ class App extends Component {
         }
 
         {
-          this.state.showRecordFuel ? <RecordFuel /> : null
+          this.state.showRecordFuel ? <RecordFuel 
+          frontScreenToggle={this.frontScreenToggle}
+          /> : null
         }
 
         {
-          this.state.showRecordMileage ? <RecordMileage /> : null
+          this.state.showRecordMileage ? <RecordMileage 
+          frontScreenToggle={this.frontScreenToggle}/> : null
         }
 
         {
-          this.state.showResultsScreen ? <ResultsScreen /> : null
+          this.state.showResultsScreen ? <ResultsScreen 
+          frontScreenToggle={this.frontScreenToggle}/> : null
         }
 
       </div>
@@ -93,3 +96,71 @@ class App extends Component {
   }
 }
 export default App;
+
+
+/* hideComponent(name) {
+
+  console.log(name);
+
+  switch (name) {
+    case "showRecordFuel":
+      this.setState({ showRecordFuel: !this.recordFuelToggle });
+      break;
+
+    case "showRecordMileage":
+      this.setState({ showRecordMileage: !this.state.showRecordMileage });
+      break;
+
+    case "showResultsScreen":
+      this.setState({ showResultsScreen: !this.state.showResultsScreen });
+      break;
+
+    default:
+      this.setState({ showFrontScreen: !this.state.showFrontScreen });
+
+  }
+}
+
+render() {
+
+  const { showFrontScreen, showRecordFuel, showRecordMileage, showResultsScreen } = this.state;
+  return (
+    <div>
+
+      <button onClick={() => this.hideComponent("showFrontScreen")}>
+
+        Click to hide Demo1 component
+
+      </button>
+
+      <button onClick={() => this.hideComponent("showRecordFuel")}>
+
+        Click to hide Demo2 component
+
+      </button>
+
+      <button onClick={() => this.hideComponent("showRecordMileage")}>
+
+        Click to hide Demo3 component
+
+      </button>
+
+      <button onClick={() => this.hideComponent("showResultsScreen")}>
+
+        Click to hide Demo4 component
+
+      </button>
+
+      <div>
+        {showFrontScreen && <FrontScreen />}
+
+        {showRecordFuel && <RecordFuel />}
+
+        {showRecordMileage && <RecordMileage />}
+
+        {showResultsScreen && <ResultsScreen />}
+
+      </div>
+    </div>
+
+  ); */
