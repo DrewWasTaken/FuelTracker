@@ -16,7 +16,7 @@ render() {
 
       <div class="card">
         <div class="card-body">
-
+<header> 
           {/* Back Button */}
           <Button theme="BackButton" onClick={this.props.frontScreenToggle}>
             Back
@@ -26,6 +26,7 @@ render() {
           <div class="jumbotron">
             <h3 class="display-5"> Fuel Expenditure, Record Fuel</h3>
           </div>
+          </header>
         </div>
 
         {/* Fuel Type Drop Down (If Petrol/Diesel Switch input to (L) if electric (KWH)*/}
