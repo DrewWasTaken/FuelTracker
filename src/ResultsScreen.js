@@ -60,8 +60,10 @@ class ResultsScreen extends Component {
 
                 Time and Date Picker
                 <br />
-                Upload Picture
-
+                <div>
+                    Upload Receipt: <input type="file" name="price" onChange={this.fileSelectedHandler} />
+                    {/* <button onClick={this.fileSelectedHandler}>Upload</button> */}
+                </div>
             </div>
         );
     }

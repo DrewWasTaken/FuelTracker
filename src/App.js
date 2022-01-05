@@ -63,28 +63,28 @@ class App extends Component {
 
         {/* Renders the FrontScreen */}
         {
-          this.state.showFrontScreen ? 
-          <FrontScreen 
-          recordFuelToggle={this.recordFuelToggle} 
-          recordMileageToggle={this.recordMileageToggle} 
-          resultsScreenToggle={this.resultsScreenToggle}
+          this.state.showFrontScreen ?
+            <FrontScreen
+              recordFuelToggle={this.recordFuelToggle}
+              recordMileageToggle={this.recordMileageToggle}
+              resultsScreenToggle={this.resultsScreenToggle}
+            /> : null
+        }
+
+        {
+          this.state.showRecordFuel ? <RecordFuel
+            frontScreenToggle={this.frontScreenToggle}
           /> : null
         }
 
         {
-          this.state.showRecordFuel ? <RecordFuel 
-          frontScreenToggle={this.frontScreenToggle}
-          /> : null
+          this.state.showRecordMileage ? <RecordMileage
+            frontScreenToggle={this.frontScreenToggle} /> : null
         }
 
         {
-          this.state.showRecordMileage ? <RecordMileage 
-          frontScreenToggle={this.frontScreenToggle}/> : null
-        }
-
-        {
-          this.state.showResultsScreen ? <ResultsScreen 
-          frontScreenToggle={this.frontScreenToggle}/> : null
+          this.state.showResultsScreen ? <ResultsScreen
+            frontScreenToggle={this.frontScreenToggle} /> : null
         }
 
       </div>

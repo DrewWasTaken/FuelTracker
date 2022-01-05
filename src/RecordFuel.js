@@ -9,23 +9,29 @@ class RecordFuel extends Component {
     }
   }
 
-
-  
-render() {
+  render() {
     return (
 
       <div class="card">
         <div class="card-body">
-<header> 
-          {/* Back Button */}
-          <Button theme="BackButton" onClick={this.props.frontScreenToggle}>
-            Back
-          </Button>
+          <header>
+            {/* Back Button */}
+            <Button theme="BackButton" onClick={this.props.frontScreenToggle}>
+              Back
+            </Button>
 
-          {/* Title */}
-          <div class="jumbotron">
-            <h3 class="display-5"> Fuel Expenditure, Record Fuel</h3>
-          </div>
+            {/* Title */}
+            <div class="jumbotron">
+              <h3 class="display-5"> Fuel Expenditure, Record Fuel</h3>
+
+              <select>
+                <option value="null">Select A Car</option>
+                <option value="car1">Car1</option>
+                <option value="car2">Car2</option>
+                <option value="car3">Car3</option>
+                <option value="car4">Car4</option>
+              </select>
+            </div>
           </header>
         </div>
 
@@ -69,7 +75,6 @@ render() {
           Upload Receipt: <input type="file" name="price" onChange={this.fileSelectedHandler} />
           {/* <button onClick={this.fileSelectedHandler}>Upload</button> */}
         </div>
-        <br />
       </div>
     );
   }
