@@ -15,6 +15,7 @@ class ResultsScreen extends Component {
         return (
 
             <div class="card">
+                {/* Display Background */}
                 <div style={{
                     backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", backgroundSize: "contain",
                     height: 750, width: 750
@@ -33,7 +34,7 @@ class ResultsScreen extends Component {
                         <h3 class="display-5"> Results</h3>
                     </div>
 
-                    {/* Select Car */}
+                    {/* Select Car Dropdown */}
                     <div>
                         <select>
                             <option value="null">Select A Car</option>
@@ -44,7 +45,7 @@ class ResultsScreen extends Component {
                         </select>
                     </div>
 
-                    {/* Chart Example */}
+                    {/* Chart */}
                     <div>
                         <MyChart />
                     </div>
@@ -69,7 +70,6 @@ class ResultsScreen extends Component {
                     </div>
                 </div>
             </div>
-
         );
     }
 }

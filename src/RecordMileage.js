@@ -16,6 +16,8 @@ class RecordMileage extends Component {
     return (
 
       <div class="card">
+
+        {/* Display Background */}
         <div style={{
           backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", backgroundSize: "contain",
           height: 750, width: 750
@@ -34,7 +36,7 @@ class RecordMileage extends Component {
             <h3 class="display-5"> Mileage Tracker </h3>
           </div>
 
-          {/* Select Car */}
+          {/* Select Car Dropdown*/}
           <div >
             <select>
               <option value="null">Select A Car</option>

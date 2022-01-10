@@ -2,7 +2,6 @@ import React from 'react'
 import { Chart } from 'react-charts'
 
 function MyChart() {
-
   const data = React.useMemo(
     () => [
       {
@@ -26,7 +25,7 @@ function MyChart() {
     <div style={{ width: '325px', height: '300px' }}>
       <Chart data={data} axes={axes} />
 
-    </div>
+    </div> //Add logic for Bar Chart over Line Graph
   )
 }
 export default MyChart;

@@ -61,7 +61,7 @@ class App extends Component {
 
       <div class="col-13 offset-0 my-5">
 
-        {/* Renders the FrontScreen */}
+        {/* Renders FrontScreen */}
         {
           this.state.showFrontScreen ?
             <FrontScreen
@@ -71,17 +71,20 @@ class App extends Component {
             /> : null
         }
 
+        {/* Renders FuelScreen */}
         {
           this.state.showRecordFuel ? <RecordFuel
             frontScreenToggle={this.frontScreenToggle}
           /> : null
         }
 
+        {/* Renders MileageScreen */}
         {
           this.state.showRecordMileage ? <RecordMileage
             frontScreenToggle={this.frontScreenToggle} /> : null
         }
 
+        {/* Renders ResultsScreen */}
         {
           this.state.showResultsScreen ? <ResultsScreen
             frontScreenToggle={this.frontScreenToggle} /> : null

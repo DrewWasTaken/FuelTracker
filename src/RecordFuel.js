@@ -6,7 +6,6 @@ class RecordFuel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
     }
   }
 
@@ -14,18 +13,23 @@ class RecordFuel extends Component {
     return (
 
       <div class="card">
+
+        {/* Display Background */}
         <div style={{
           backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", backgroundSize: "contain",
           height: 750, width: 750
         }}>
+
           <header>
             {/* Back Button */}
             <Button theme="BackButton" onClick={this.props.frontScreenToggle}>
               Back
             </Button>
           </header>
+
           <div class="card-body">
             <br /><br /><br />
+
             {/* Title PLACE THIS IN HEADER WITH BUTTON*/}
             <h3 class="display-5">Record Fuel</h3>
           </div>
@@ -40,6 +44,7 @@ class RecordFuel extends Component {
             </select>
           </div>
           <br />
+
           {/* Fuel Type Drop Down (If Petrol/Diesel Switch input to (L) if electric (KWH)*/}
           <div>
             <label>

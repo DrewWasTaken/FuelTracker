@@ -7,13 +7,13 @@ class FrontScreen extends Component {
         super(props);
         this.state = {
         }
-
     }
 
     render() {
         return (
             <div className="container">
 
+                {/* Display Background */}
                 <div style={{
                     backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", backgroundSize: "contain",
                     height: 750, width: 750
