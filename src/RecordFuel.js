@@ -9,7 +9,11 @@ class RecordFuel extends Component {
     }
   }
 
+  showL = false;
+  showKWH = false;
+
   render() {
+
     return (
 
       <div class="card">
@@ -58,7 +62,30 @@ class RecordFuel extends Component {
             </label>
           </div>
 
-          {/* Amount Input*/}
+          {/* IF ELECTRIC IS CHOSEN SHOW KWH & HIDE L
+
+          {/* if (value ="electric")
+          {
+            showL = true;
+          showKWH = false;    
+          }
+          else
+          {
+            showL = false;
+          showKWH = true;    
+          } 
+
+          {/* Amount (KWH) Input*
+          { <form>
+            <label>
+              Amount (KWH):&nbsp;
+              <input type="number" name="amount" placeholder="Enter Amount" />
+            </label>
+            <br /> 
+            
+            */}
+
+          {/* Amount (L) Input*/}
           <form>
             <label>
               Amount (L):&nbsp;
