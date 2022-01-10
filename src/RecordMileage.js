@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from './Button';
+import image from "./background.png";
 
 // import DateTimePicker from 'react-datetime-picker';
 
@@ -7,9 +8,7 @@ class RecordMileage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
     }
-
   }
 
 
@@ -17,46 +16,49 @@ class RecordMileage extends Component {
     return (
 
       <div class="card">
-        <div class="card-body">
+        <div style={{
+          backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", backgroundSize: "contain",
+          height: 750, width: 750
+        }}>
 
-          {/* Back Button */}
-          <Button theme="BackButton" onClick={this.props.frontScreenToggle}>
-            Back
-          </Button>
+          <header>
+            {/* Back Button */}
+            <Button theme="BackButton" onClick={this.props.frontScreenToggle}>
+              Back
+            </Button>
+          </header>
+          <div class="card-body">
+            <br /><br /><br />
 
-          {/* Title */}
-          <div class="jumbotron">
-            <h3 class="display-5"> Mileage Tracker</h3>
+            {/* Title */}
+            <h3 class="display-5"> Mileage Tracker </h3>
           </div>
-        </div>
 
-        {/* Select Car */}
-        <div>
-          <label>
-            Select Car:
+          {/* Select Car */}
+          <div >
             <select>
+              <option value="null">Select A Car</option>
               <option value="car1">Car1</option>
               <option value="car2">Car2</option>
               <option value="car3">Car3</option>
               <option value="car4">Car4</option>
             </select>
-          </label>
-        </div>
+          </div>
 
-        {/* Miles Driven Input*/}
-        <form>
-          <label>
-            Miles Driven:
-            <input type="number" name="miles" placeholder="Enter Miles" />
-          </label>
+          {/* Miles Driven Input*/}
+          <form>
+            <label>
+              Miles Driven:&nbsp;
+              <input type="number" name="miles" placeholder="Enter Miles" />
+            </label>
+          </form>
+
+          Time and Date Picker
           <br />
-        </form>
-
-        Time and Date Picker
-        <br />
-        <div>
-          Upload Receipt: <input type="file" name="price" onChange={this.fileSelectedHandler} />
-          {/* <button onClick={this.fileSelectedHandler}>Upload</button> */}
+          <div>
+            Upload Receipt: <input type="file" name="price" onChange={this.fileSelectedHandler} />
+            {/* <button onClick={this.fileSelectedHandler}>Upload</button> */}
+          </div>
         </div>
 
       </div>

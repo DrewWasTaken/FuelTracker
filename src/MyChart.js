@@ -7,7 +7,7 @@ function MyChart() {
     () => [
       {
         //Lines On Chart
-        label: 'Money',
+        label: 'Expenditure',
         data: [[0, 1], [1, 2], [2, 4], [3, 2], [4, 7]]
       },
     ],
@@ -24,7 +24,7 @@ function MyChart() {
 
   return (
     <div style={{ width: '325px', height: '300px' }}>
-      <Chart data={data} axes={axes} chartType="BarChart" />
+      <Chart data={data} axes={axes} />
 
     </div>
   )
